@@ -49,9 +49,9 @@ app.listen(port, () => {
 // POSTGRES CREDENTIALS
 
 
-const Pool = require("pg").pool;
+const Pool2 = require("pg").pool;
 
-const pool = new Pool({
+const pool = new Pool2({
   host: "ec2-54-82-205-3.compute-1.amazonaws.com",
   database: "d3bgqcqvsdgc88",
   port: "5432",
@@ -60,5 +60,3 @@ const pool = new Pool({
 
 
 });
-
-module.exports = pool;
