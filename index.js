@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const pool = require('./db');
+const Pool = require("pg").pool;
 const cors = require('cors');
 
 const port = process.env.PORT || 3000;
@@ -49,9 +49,7 @@ app.listen(port, () => {
 // POSTGRES CREDENTIALS
 
 
-const Pool2 = require("pg").pool;
-
-const pool = new Pool2({
+const pool = ({
   host: "ec2-54-82-205-3.compute-1.amazonaws.com",
   database: "d3bgqcqvsdgc88",
   port: "5432",
